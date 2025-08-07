@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alison Stehle</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My GIS Website</title>
+
   <style>
+    /* Make body full screen with no margin */
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
     }
-    .container {
-      max-width: 700px;
-      margin: 50px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
     }
-    h1 {
-      color: #0077b5;
-      font-size: 2em;
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
-    p {
-      line-height: 1.6;
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
     }
-    a {
-      color: #0077b5;
-      text-decoration: none;
-    }
-    .links a {
-      display: inline-block;
-      margin-top: 15px;
-      font-weight: bold;
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Alison Stehle</h1>
-    <p>Welcome to my personal website! I'm passionate about GIS, cloud technology, and creating smarter systems for communities and organizations.</p>
 
-    <div class="links">
-      <a href="https://www.linkedin.com/in/alison-stehle-gis/" target="_blank">🔗 LinkedIn</a><br>
-      <a href="https://github.com/astehleastehle" target="_blank">👩‍💻 GitHub</a><br>
-      <a href="mailto:alison.g.stehle@gmail.com">✉️ Email Me</a>
-    </div>
-  </div>
+<body>
+
+  <header>
+    <h1>🌍 My GIS Portfolio</h1>
+    <p>Interactive Maps & Geospatial Projects</p>
+  </header>
+
+  <main>
+    <h2>About This Site</h2>
+    <p>This site showcases my GIS work, including web maps, dashboards, and analysis using ArcGIS and Python.</p>
+
+    <h2>Interactive Map</h2>
+    <iframe src="https://www.arcgis.com/apps/Embed/index.html?webmap=d2213ccd88af439aa99b4bed4629dff5" allowfullscreen></iframe>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Name — All Rights Reserved
+  </footer>
+
 </body>
 </html>
