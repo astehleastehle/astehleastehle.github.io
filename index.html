@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GIS Website</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alison Stehle | GIS Cloud Architect Portfolio</title>
   <style>
-    /* Make body full screen with no margin */
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
     }
-
+    
     header {
-      background-color: #222;
-      color: white;
-      padding: 1rem;
+      background: linear-gradient(90deg, #1f1f1f, #0a0a0a);
       text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 2px solid #00f0ff;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
     }
-
-    main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+    
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      font-size: 3rem;
+      color: #00f0ff;
+      text-shadow: 0 0 10px #00f0ff;
     }
-
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 1rem;
+    
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00f0ff;
       margin-top: 2rem;
+      border-bottom: 1px solid #00f0ff;
+      padding-bottom: 0.3rem;
+    }
+    
+    a {
+      color: #00f0ff;
+    }
+    
+    form button {
+      background-color: #00f0ff;
+      color: #0a0a0a;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+    
+    form button:hover {
+      background-color: #00c0cc;
+    }
+    
+    pre {
+      background-color: #1f1f1f;
+      color: #00f0ff;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+    }
+
+    ul {
+      padding-left: 1.5rem;
     }
   </style>
 </head>
@@ -46,20 +72,78 @@
 <body>
 
   <header>
-    <h1>🌍 My GIS Portfolio</h1>
-    <p>Interactive Maps & Geospatial Projects</p>
+    <h1>Alison Stehle</h1>
+    <p>GIS | Cloud Computing | Python | C++ | Cybersecurity | Linux | Networking</p>
   </header>
 
   <main>
-    <h2>About This Site</h2>
-    <p>This site showcases my GIS work, including web maps, dashboards, and analysis using ArcGIS and Python.</p>
 
-    <h2>Interactive Map</h2>
+    <h2>🌟 About Me</h2>
+    <p>I'm a GIS Cloud Computing student passionate about geospatial technology, coding, cloud architecture, and IT systems. This portfolio showcases my journey and projects in GIS, Python, C++, Linux, and cybersecurity as I work toward becoming a GIS Cloud Architect.</p>
+    
+    <h2>🚀 Career Roadmap</h2>
+    <div class="mermaid">
+    graph TD
+        GIS[6 Years in GIS] --> ArcMap
+        GIS --> Portal[ArcGIS Portal]
+        GIS --> Python
+        GIS --> Dashboards
+        GIS --> ExpBuilder[Experience Builder]
+        GIS --> Survey[Survey123]
+        Survey --> NGA[NGA GPCF Certificate]
+        NGA --> Hallmark[Hallmark University: Cloud Computing]
+        Hallmark --> Networking
+        Hallmark --> Linux
+        Hallmark --> Cybersecurity
+        Hallmark --> CAD[Cloud Application Design]
+        CAD --> AWS[AWS Solutions Architect]
+        CAD --> Azure[Microsoft Azure Administrator]
+        CAD --> CloudPlus[CompTIA Cloud+]
+        AWS --> Future[Future: GIS Cloud Architect | Cloud-hosted GIS | Real-time 3D Dashboards]
+        Azure --> Future
+        CloudPlus --> Future
+    </div>
+    
+    <!-- Mermaid.js script -->
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+    
+    <h2>🗺️ Interactive Map</h2>
     <iframe src="https://www.arcgis.com/apps/Embed/index.html?webmap=d2213ccd88af439aa99b4bed4629dff5" allowfullscreen></iframe>
+
+    <h2>📄 Download My Resume</h2>
+    <p><a href="assets/resume.pdf" target="_blank">Click here to view or download my resume</a></p>
+
+    <h2>🧰 Project Highlights</h2>
+    <ul>
+      <li><strong>ArcGIS Dashboard:</strong> Real-time water equity analysis using ArcGIS Online</li>
+      <li><strong>Python + Pandas:</strong> GIS data cleanup automation for survey datasets</li>
+      <li><strong>Linux Web Server:</strong> Hosted map app using NGINX on Ubuntu VM</li>
+      <li><strong>C++ CLI Tool:</strong> Geospatial file converter using C++ and GDAL</li>
+      <li><strong>Cyber Lab:</strong> Hardened Ubuntu server in virtual network environment</li>
+    </ul>
+
+    <h2>💡 Technical Snippet (Python)</h2>
+    <pre><code>
+import arcpy
+arcpy.Buffer_analysis("Rivers", "BufferedRivers", "100 Meters")
+    </code></pre>
+    <p><a href="https://github.com/yourusername" target="_blank">More on GitHub →</a></p>
+
+    <h2>📬 Contact Me</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
   </main>
 
   <footer>
-    &copy; 2025 Your Name — All Rights Reserved
+    &copy; 2025 Alison Stehle | Built with ❤️ using HTML, CSS, and GIS tools
   </footer>
 
 </body>
