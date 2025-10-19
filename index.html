@@ -6,20 +6,92 @@
   <title>Alison's Pixel Portal</title>
   <style>
     html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  background-color: #9e8ec5; /* Match this to the dominant color of your GIF */
-  background-image: url('https://i.pinimg.com/originals/8e/d7/c2/8ed7c282dd9f656f08b567e70c2930db.gif');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 80%; /* Adjust zoom level */
-}
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #9e8ec5;
+      background-image: url('https://i.pinimg.com/originals/8e/d7/c2/8ed7c282dd9f656f08b567e70c2930db.gif');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 80%;
+    }
+
+    .clickable-object {
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .clickable-object:hover {
+      transform: scale(1.1);
+    }
+
+    .content-box {
+      position: fixed;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 1000;
+      max-width: 400px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .content-box.active {
+      display: block;
+    }
+
+    .close-btn {
+      float: right;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
+  <!-- Clickable overlay objects -->
+  <div class="clickable-object" style="width: 80px; height: 80px; top: 30%; left: 20%;" data-content="computer"></div>
+  <div class="clickable-object" style="width: 100px; height: 100px; top: 60%; left: 70%;" data-content="bedmat"></div>
+
+  <!-- Content boxes -->
+  <div class="content-box" id="computer">
+    <span class="close-btn">&times;</span>
+    <h3>Computer</h3>
+    <p>This is information about the computer!</p>
+  </div>
+
+  <div class="content-box" id="bedmat">
+    <span class="close-btn">&times;</span>
+    <h3>Object 2</h3>
+    <p>This is information about object 2!</p>
+  </div>
+
+  <script>
+    const clickableObjects = document.querySelectorAll('.clickable-object');
+    const contentBoxes = document.querySelectorAll('.content-box');
+    const closeButtons = document.querySelectorAll('.close-btn');
+
+    clickableObjects.forEach(obj => {
+      obj.addEventListener('click', () => {
+        const contentId = obj.getAttribute('data-content');
+        document.getElementById(contentId).classList.add('active');
+      });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.target.closest('.content-box').classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
+
+
 
 
